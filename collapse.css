@@ -1,0 +1,26 @@
+details {
+  /* user-select: none; */
+  user-select: auto;
+}
+
+details>summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  /* margin-right: 12; */
+  /* margin-left: auto; */
+}
+
+details[open] summary span.icon {
+  transform: rotate(90deg);
+  /* transform: rotate(180deg); */
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
