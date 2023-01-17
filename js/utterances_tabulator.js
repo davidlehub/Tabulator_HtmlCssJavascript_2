@@ -18,19 +18,19 @@ var tabulator_utterances_config = {
 		{title:"Id", field:"id"},
 	],	
 				
-	// data: jsonData,
-
 	//additional tabulator configuration options
 };		
-			
 
-// fetch('path/to/data.json')
-fetch(utterance_dataFile)
-    .then(response => response.json())
-    .then(jsonData => {
-		tabulator_utterances_config["data"] = jsonData;
-			// tabulator_keyboardKeys_config["data"] = jsonData;
-		var table = new Tabulator(utterances_pageElementID2, tabulator_utterances_config);
-		// var table = new Tabulator(pageElementID, tabulator_keyboardKeys_config);
-});
+renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
+
+
+// // fetch('path/to/data.json')
+// fetch(utterance_dataFile)
+//     .then(response => response.json())
+//     .then(jsonData => {
+// 		tabulator_utterances_config["data"] = jsonData;
+// 			// tabulator_keyboardKeys_config["data"] = jsonData;
+// 		var table = new Tabulator(utterances_pageElementID2, tabulator_utterances_config);
+// 		// var table = new Tabulator(pageElementID, tabulator_keyboardKeys_config);
+// });
 

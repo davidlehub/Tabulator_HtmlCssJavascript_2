@@ -17,6 +17,7 @@ var tabulator_keyboardKeys_config = {
 		{title:"Id", field:"id"},
 	],	
 
+	//__ Nested table.
 	rowFormatter:function(row){
 		//create and style holder elements
 	 var holderEl = document.createElement("div");
@@ -50,8 +51,12 @@ var tabulator_keyboardKeys_config = {
 	//additional tabulator configuration options
 };
 
-async function getUsers() {
-	let url = '/data/KeyboardKeys_withoutID.json';
+renderTable(keyboardKeys_dataFile,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
+
+
+async function getData(dataUrl) {
+	// let url = '/data/KeyboardKeys_withoutID.json';
+	let url = dataUrl;
 	try {
 			let res = await fetch(url);
 			return await res.json();
@@ -61,8 +66,8 @@ async function getUsers() {
 };
 
 
-async function renderUsers(keyboardKeys_pageElementID2, tabulator_keyboardKeys_config) {
-	let users = await getUsers();
+async function renderTable(dataUrl, keyboardKeys_pageElementID2, tabulator_keyboardKeys_config) {
+	let users = await getData(dataUrl);
 	let html = '';
 
 	console.log(users);
@@ -82,7 +87,6 @@ async function renderUsers(keyboardKeys_pageElementID2, tabulator_keyboardKeys_c
 	});	
 }
 
-renderUsers(keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
 // console.log(renderUsers(keyboardKeys_pageElementID2, tabulator_keyboardKeys_config));
 
 
