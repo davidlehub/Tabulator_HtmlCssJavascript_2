@@ -28,7 +28,6 @@ var tabulator_keyboardKeys_config = {
 	 holderEl.style.borderTop = "1px solid #333";
 	 holderEl.style.borderBotom = "1px solid #333";
 	 
-
 	 tableEl.style.border = "1px solid #333";
 
 	 holderEl.appendChild(tableEl);
@@ -36,16 +35,6 @@ var tabulator_keyboardKeys_config = {
 	 row.getElement().appendChild(holderEl);
 
 	 var subTable = new Tabulator(tableEl, tabulator_utterances_config)
-
-		//  var subTable = new Tabulator(tableEl, {
-		// 		 layout:"fitColumns",
-		// 		 data:row.getData().serviceHistory,
-		// 		 columns:[
-		// 		 {title:"Date", field:"date", sorter:"date"},
-		// 		 {title:"Engineer", field:"engineer"},
-		// 		 {title:"Action", field:"actions"},
-		// 		 ]
-		//  })
 	},	
 
 	//additional tabulator configuration options
