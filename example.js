@@ -8,7 +8,7 @@ var data = [
 	{id: 3, name: "Christine Lobowski", age: "42", col: "green", dob: "22/05/1982"},
 ];
 
-var table = new Tabulator("#example-table", {
+var table = new Tabulator("#utterances-table", {
 	data: data,
 	columns: [
 		{title: "Name", field: "name"},

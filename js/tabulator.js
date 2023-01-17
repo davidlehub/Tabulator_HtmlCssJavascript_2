@@ -8,7 +8,7 @@
 // ];
 
 // //tabulator constructor
-// var table = new Tabulator("#example-table", {
+// var table = new Tabulator("#utterances-table", {
 // 	data:data,
 // 	columns: [
 // 			{title:"Name", field:"name", width:150},
@@ -23,7 +23,7 @@
 fetch('/data/utterances_withoutID.json')
     .then(response => response.json())
     .then(jsonData => {
-    var table = new Tabulator("#example-table", {
+    var table = new Tabulator("#utterances-table", {
 				height:"211px",
 
         data: jsonData,
