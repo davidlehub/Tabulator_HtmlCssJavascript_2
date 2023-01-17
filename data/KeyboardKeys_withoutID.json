@@ -1,0 +1,713 @@
+[{
+  "id": 1,
+  "keySymbol": "a",
+  "utterance": "arkh",
+  "word": "arkh",
+  "keyName": "a",
+  "tag": "alphabet"
+},{
+  "id": 2,
+  "keySymbol": "c",
+  "utterance": "char",
+  "word": "char",
+  "keyName": "c",
+  "tag": "alphabet"
+},{
+  "id": 3,
+  "keySymbol": "d",
+  "utterance": "dell",
+  "word": "dack",
+  "keyName": "d",
+  "tag": "alphabet"
+},{
+  "id": 4,
+  "keySymbol": "e",
+  "utterance": "eckh",
+  "word": "eckh",
+  "keyName": "e",
+  "tag": "alphabet"
+},{
+  "id": 5,
+  "keySymbol": "f",
+  "utterance": "fonk",
+  "word": "fonk",
+  "keyName": "f",
+  "tag": "alphabet"
+},{
+  "id": 6,
+  "keySymbol": "g",
+  "utterance": "gee",
+  "word": "gee",
+  "keyName": "g",
+  "tag": "alphabet"
+},{
+  "id": 7,
+  "keySymbol": "h",
+  "utterance": "hoop",
+  "word": "hoop",
+  "keyName": "h",
+  "tag": "alphabet"
+},{
+  "id": 8,
+  "keySymbol": "i",
+  "utterance": "ish",
+  "word": "ish",
+  "keyName": "i",
+  "tag": "alphabet"
+},{
+  "id": 9,
+  "keySymbol": "j",
+  "utterance": "jaay",
+  "word": "jaay",
+  "keyName": "j",
+  "tag": "alphabet"
+},{
+  "id": 10,
+  "keySymbol": "k",
+  "utterance": "kaay",
+  "word": "kaay",
+  "keyName": "k",
+  "tag": "alphabet"
+},{
+  "id": 11,
+  "keySymbol": "l",
+  "utterance": "lape",
+  "word": "lape",
+  "keyName": "l",
+  "tag": "alphabet"
+},{
+  "id": 12,
+  "keySymbol": "m",
+  "utterance": "moush",
+  "word": "moush",
+  "keyName": "m",
+  "tag": "alphabet"
+},{
+  "id": 13,
+  "keySymbol": "n",
+  "utterance": "noy",
+  "word": "noy",
+  "keyName": "n",
+  "tag": "alphabet"
+},{
+  "id": 14,
+  "keySymbol": "o",
+  "utterance": "osh",
+  "word": "osh",
+  "keyName": "o",
+  "tag": "alphabet"
+},{
+  "id": 15,
+  "keySymbol": "p",
+  "utterance": "pom",
+  "word": "pom",
+  "keyName": "p",
+  "tag": "alphabet"
+},{
+  "id": 16,
+  "keySymbol": "q",
+  "utterance": "quox",
+  "word": "quox",
+  "keyName": "q",
+  "tag": "alphabet"
+},{
+  "id": 17,
+  "keySymbol": "r",
+  "utterance": "rump",
+  "word": "rump",
+  "keyName": "r",
+  "tag": "alphabet"
+},{
+  "id": 18,
+  "keySymbol": "s",
+  "utterance": "souk",
+  "word": "souk",
+  "keyName": "s",
+  "tag": "alphabet"
+},{
+  "id": 19,
+  "keySymbol": "t",
+  "utterance": "tooi",
+  "word": "tooi",
+  "keyName": "t",
+  "tag": "alphabet"
+},{
+  "id": 20,
+  "keySymbol": "u",
+  "utterance": "unk",
+  "word": "unk",
+  "keyName": "u",
+  "tag": "alphabet"
+},{
+  "id": 21,
+  "keySymbol": "v",
+  "utterance": "van",
+  "word": "van",
+  "keyName": "v",
+  "tag": "alphabet"
+},{
+  "id": 22,
+  "keySymbol": "w",
+  "utterance": "wump",
+  "word": "wump",
+  "keyName": "w",
+  "tag": "alphabet"
+},{
+  "id": 23,
+  "keySymbol": "x",
+  "utterance": "santh",
+  "word": "santh",
+  "keyName": "x",
+  "tag": "alphabet"
+},{
+  "id": 24,
+  "keySymbol": "y",
+  "utterance": "york",
+  "word": "york",
+  "keyName": "y",
+  "tag": "alphabet"
+},{
+  "id": 25,
+  "keySymbol": "z",
+  "utterance": "zed",
+  "word": "zed",
+  "keyName": "z",
+  "tag": "alphabet"
+},{
+  "id": 26,
+  "keySymbol": "~",
+  "utterance": "tork",
+  "word": "tork",
+  "keyName": "tilde",
+  "tag": "symbol"
+},{
+  "id": 27,
+  "keySymbol": "[",
+  "utterance": "lunk",
+  "word": "lunk",
+  "keyName": "lbracket",
+  "tag": "symbol"
+},{
+  "id": 28,
+  "keySymbol": "]",
+  "utterance": "runk",
+  "word": "runk",
+  "keyName": "rbracket",
+  "tag": "symbol"
+},{
+  "id": 29,
+  "keySymbol": "|",
+  "utterance": "bark",
+  "word": "bark",
+  "keyName": "bar",
+  "tag": "symbol"
+},{
+  "id": 30,
+  "keySymbol": "`",
+  "utterance": "bick",
+  "word": "bick",
+  "keyName": "backtick",
+  "tag": "symbol"
+},{
+  "id": 31,
+  "keySymbol": "'",
+  "utterance": "mook",
+  "word": "mook",
+  "keyName": "squote",
+  "tag": "symbol"
+},{
+  "id": 32,
+  "keySymbol": "\"",
+  "utterance": "noof",
+  "word": "noof",
+  "keyName": "dquote",
+  "tag": "symbol"
+},{
+  "id": 33,
+  "keySymbol": "<",
+  "utterance": "leck",
+  "word": "leck",
+  "keyName": "langle",
+  "tag": "symbol"
+},{
+  "id": 34,
+  "keySymbol": ">",
+  "utterance": "reck",
+  "word": "reck",
+  "keyName": "rangle",
+  "tag": "symbol"
+},{
+  "id": 35,
+  "keySymbol": "(",
+  "utterance": "reep",
+  "word": "reep",
+  "keyName": "lparen",
+  "tag": "symbol"
+},{
+  "id": 36,
+  "keySymbol": ")",
+  "utterance": "leep",
+  "word": "leep",
+  "keyName": "rparen",
+  "tag": "symbol"
+},{
+  "id": 37,
+  "keySymbol": ":",
+  "utterance": "shook",
+  "word": "shook",
+  "keyName": "colon",
+  "tag": "symbol"
+},{
+  "id": 38,
+  "keySymbol": ",",
+  "utterance": "cam",
+  "word": "cam",
+  "keyName": "comma",
+  "tag": "symbol"
+},{
+  "id": 39,
+  "keySymbol": "_",
+  "utterance": "dish",
+  "word": "dish",
+  "keyName": "underscore",
+  "tag": "symbol"
+},{
+  "id": 40,
+  "keySymbol": ";",
+  "utterance": "yap",
+  "word": "yap",
+  "keyName": "semicolon",
+  "tag": "symbol"
+},{
+  "id": 41,
+  "keySymbol": "+",
+  "utterance": "nhieu",
+  "word": "nhieu",
+  "keyName": "plus",
+  "tag": "symbol"
+},{
+  "id": 42,
+  "keySymbol": "-",
+  "utterance": "dash",
+  "word": "dash",
+  "keyName": "minus",
+  "tag": "symbol"
+},{
+  "id": 43,
+  "keySymbol": "!",
+  "utterance": "clam",
+  "word": "clam",
+  "keyName": "exclamation",
+  "tag": "symbol"
+},{
+  "id": 44,
+  "keySymbol": "?",
+  "utterance": "quash",
+  "word": "quash",
+  "keyName": "question",
+  "tag": "symbol"
+},{
+  "id": 45,
+  "keySymbol": "^",
+  "utterance": "moy",
+  "word": "moy",
+  "keyName": "caret",
+  "tag": "symbol"
+},{
+  "id": 46,
+  "keySymbol": ".",
+  "utterance": "poot",
+  "word": "poot",
+  "keyName": "dot",
+  "tag": "symbol"
+},{
+  "id": 47,
+  "keySymbol": "@",
+  "utterance": "laat",
+  "word": "laat",
+  "keyName": "at",
+  "tag": "symbol"
+},{
+  "id": 48,
+  "keySymbol": "#",
+  "utterance": "hash",
+  "word": "hash",
+  "keyName": "hash",
+  "tag": "symbol"
+},{
+  "id": 49,
+  "keySymbol": "/",
+  "utterance": "graif",
+  "word": "graif",
+  "keyName": "slash",
+  "tag": "symbol"
+},{
+  "id": 50,
+  "keySymbol": "$",
+  "utterance": "dall",
+  "word": "dall",
+  "keyName": "dollar",
+  "tag": "symbol"
+},{
+  "id": 51,
+  "keySymbol": "%",
+  "utterance": "pers",
+  "word": "pers",
+  "keyName": "percent",
+  "tag": "symbol"
+},{
+  "id": 52,
+  "keySymbol": "space",
+  "utterance": "spooce",
+  "word": "spooce",
+  "keyName": "space",
+  "tag": "editing"
+},{
+  "id": 53,
+  "keySymbol": "tab",
+  "utterance": "tabby",
+  "word": "tabby",
+  "keyName": "tab",
+  "tag": "editing"
+},{
+  "id": 54,
+  "keySymbol": "enter",
+  "utterance": "slurp",
+  "word": "slurp",
+  "keyName": "enter",
+  "tag": "editing"
+},{
+  "id": 55,
+  "keySymbol": "b",
+  "utterance": "brov",
+  "word": "brov",
+  "keyName": "b",
+  "tag": "alphabet"
+},{
+  "id": 56,
+  "keySymbol": "delete",
+  "utterance": "xoaa",
+  "word": "xoaa",
+  "keyName": "del",
+  "tag": "editing"
+},{
+  "id": 57,
+  "keySymbol": "insert",
+  "utterance": "chhen",
+  "word": "chhen",
+  "keyName": "insert",
+  "tag": "editing"
+},{
+  "id": 58,
+  "keySymbol": "left",
+  "utterance": "gauche",
+  "word": "gauche",
+  "keyName": "left",
+  "tag": "direction"
+},{
+  "id": 59,
+  "keySymbol": "right",
+  "utterance": "droite",
+  "word": "droite",
+  "keyName": "right",
+  "tag": "direction"
+},{
+  "id": 60,
+  "keySymbol": "up",
+  "utterance": "yup",
+  "word": "yup",
+  "keyName": "up",
+  "tag": "direction"
+},{
+  "id": 61,
+  "keySymbol": "down",
+  "utterance": "yown",
+  "word": "yown",
+  "keyName": "down",
+  "tag": "direction"
+},{
+  "id": 62,
+  "keySymbol": "page up",
+  "utterance": "treenh",
+  "word": "treenh",
+  "keyName": "pgup",
+  "tag": "navigation"
+},{
+  "id": 63,
+  "keySymbol": "page down",
+  "utterance": "yeuui",
+  "word": "yeuui",
+  "keyName": "pgdown",
+  "tag": "navigation"
+},{
+  "id": 64,
+  "keySymbol": "home",
+  "utterance": "ddaau",
+  "word": "ddaau",
+  "keyName": "home",
+  "tag": "navigation"
+},{
+  "id": 65,
+  "keySymbol": "end",
+  "utterance": "cuooii",
+  "word": "cuooii",
+  "keyName": "end",
+  "tag": "navigation"
+},{
+  "id": 66,
+  "keySymbol": "f1",
+  "utterance": "F one",
+  "word": "F",
+  "keyName": "f1",
+  "tag": "function"
+},{
+  "id": 67,
+  "keySymbol": "f2 ",
+  "utterance": "F two",
+  "word": "F",
+  "keyName": "f2",
+  "tag": "function"
+},{
+  "id": 68,
+  "keySymbol": "f3 ",
+  "utterance": "F three",
+  "word": "F",
+  "keyName": "f3",
+  "tag": "function"
+},{
+  "id": 69,
+  "keySymbol": "f4 ",
+  "utterance": "F four",
+  "word": "F",
+  "keyName": "f4",
+  "tag": "function"
+},{
+  "id": 70,
+  "keySymbol": "f5 ",
+  "utterance": "F five",
+  "word": "F",
+  "keyName": "f5",
+  "tag": "function"
+},{
+  "id": 71,
+  "keySymbol": "f6 ",
+  "utterance": "F six",
+  "word": "F",
+  "keyName": "f6",
+  "tag": "function"
+},{
+  "id": 72,
+  "keySymbol": "f7 ",
+  "utterance": "F seven",
+  "word": "F",
+  "keyName": "f7",
+  "tag": "function"
+},{
+  "id": 73,
+  "keySymbol": "f8 ",
+  "utterance": "F eight",
+  "word": "F",
+  "keyName": "f8",
+  "tag": "function"
+},{
+  "id": 74,
+  "keySymbol": "f9 ",
+  "utterance": "F night",
+  "word": "F",
+  "keyName": "f9",
+  "tag": "function"
+},{
+  "id": 75,
+  "keySymbol": "f10",
+  "utterance": "F ten",
+  "word": "F",
+  "keyName": "f10",
+  "tag": "function"
+},{
+  "id": 76,
+  "keySymbol": "f11",
+  "utterance": "F eleven",
+  "word": "F",
+  "keyName": "f11",
+  "tag": "function"
+},{
+  "id": 77,
+  "keySymbol": "f12",
+  "utterance": "F twelve",
+  "word": "F",
+  "keyName": "f12",
+  "tag": "function"
+},{
+  "id": 78,
+  "keySymbol": "apps/menu",
+  "utterance": "apps",
+  "word": "apps",
+  "keyName": "apps",
+  "tag": "Special"
+},{
+  "id": 79,
+  "keySymbol": "window",
+  "utterance": "wing",
+  "word": "wing",
+  "keyName": "win",
+  "tag": "modifier"
+},{
+  "id": 80,
+  "keySymbol": "shift",
+  "utterance": "strum",
+  "word": "strum",
+  "keyName": "shift",
+  "tag": "modifier"
+},{
+  "id": 81,
+  "keySymbol": "ctrl",
+  "utterance": "zoll",
+  "word": "zoll",
+  "keyName": "ctrl",
+  "tag": "modifier"
+},{
+  "id": 82,
+  "keySymbol": "alt",
+  "utterance": "zaam",
+  "word": "zaam",
+  "keyName": "alt",
+  "tag": "modifier"
+},{
+  "id": 83,
+  "keySymbol": "numpad0",
+  "keyName": "np0",
+  "tag": "Numberpad"
+},{
+  "id": 84,
+  "keySymbol": "numpad1  ",
+  "keyName": "np1",
+  "tag": "Numberpad"
+},{
+  "id": 85,
+  "keySymbol": "numpad2  ",
+  "keyName": "np2",
+  "tag": "Numberpad"
+},{
+  "id": 86,
+  "keySymbol": "numpad3  ",
+  "keyName": "np3",
+  "tag": "Numberpad"
+},{
+  "id": 87,
+  "keySymbol": "numpad4  ",
+  "keyName": "np4",
+  "tag": "Numberpad"
+},{
+  "id": 88,
+  "keySymbol": "numpad5  ",
+  "keyName": "np5",
+  "tag": "Numberpad"
+},{
+  "id": 89,
+  "keySymbol": "numpad6  ",
+  "keyName": "np6",
+  "tag": "Numberpad"
+},{
+  "id": 90,
+  "keySymbol": "numpad7  ",
+  "keyName": "np7",
+  "tag": "Numberpad"
+},{
+  "id": 91,
+  "keySymbol": "numpad8  ",
+  "keyName": "np8",
+  "tag": "Numberpad"
+},{
+  "id": 92,
+  "keySymbol": "numpad9  ",
+  "keyName": "np9",
+  "tag": "Numberpad"
+},{
+  "id": 93,
+  "keySymbol": "numpad +",
+  "keyName": "npadd",
+  "tag": "Numberpad"
+},{
+  "id": 94,
+  "keySymbol": "numpad .",
+  "keyName": "npdec",
+  "tag": "Numberpad"
+},{
+  "id": 95,
+  "keySymbol": "numpad /",
+  "keyName": "npdiv",
+  "tag": "Numberpad"
+},{
+  "id": 96,
+  "keySymbol": "numpad *",
+  "utterance": "lump",
+  "word": "lump",
+  "keyName": "npmul",
+  "tag": "Numberpad"
+},{
+  "id": 97,
+  "keySymbol": "numpad -",
+  "keyName": "npsub",
+  "tag": "Numberpad"
+},{
+  "id": 98,
+  "keySymbol": "escape",
+  "utterance": "squit",
+  "word": "squit",
+  "keyName": "escape",
+  "tag": "symbol"
+},{
+  "id": 99,
+  "keySymbol": "{",
+  "utterance": "lia",
+  "word": "lia",
+  "keyName": "lbrace",
+  "tag": "symbol"
+},{
+  "id": 100,
+  "keySymbol": "}",
+  "utterance": "ria",
+  "word": "ria",
+  "keyName": "rbrace",
+  "tag": "symbol"
+},{
+  "id": 101,
+  "keySymbol": "&",
+  "utterance": "vaa",
+  "word": "vaa",
+  "keyName": "ampersand",
+  "tag": "alphabet"
+},{
+  "id": 102,
+  "keySymbol": "*",
+  "utterance": "lump",
+  "word": "lump",
+  "keyName": "asterisk",
+  "tag": "symbol"
+},{
+  "id": 103,
+  "keySymbol": "=",
+  "utterance": "baang",
+  "word": "baang",
+  "keyName": "equal",
+  "tag": "alphabet"
+},{
+  "id": 104,
+  "keySymbol": "\\\\",
+  "utterance": "beck",
+  "word": "beck",
+  "keyName": "backslash",
+  "tag": "symbol"
+},{
+  "id": 105,
+  "keySymbol": "backspace",
+  "utterance": "purp",
+  "word": "purp",
+  "keyName": "backspace",
+  "tag": "editing"
+},{
+  "_id": "",
+  "keySymbol": "",
+  "keyName": "",
+  "word": ""
+}]
