@@ -27,13 +27,7 @@
 			Keyboard's Keys table:
 		</summary>
 
-		<!-- Buttons -->
-		<div>
-			<button id="reactivity-add">Add New Row</button>
-			<button id="reactivity-delete">Remove Row</button>
-			<button id="reactivity-update">Update First Row Name</button>
-		</div>		
-		
+
 		<!-- table -->
 		<div id="keyboardKeys-table"></div>
 	</details>
@@ -45,12 +39,22 @@
 			<span class="icon">👉</span>
 			Utterances table:
 		</summary>
+
+		<!-- Buttons -->
+		<div> <!-- id020230117190349 -->
+			<button id="reactivity-add">Add New Row</button>
+			<button id="reactivity-delete">Remove Row</button>
+			<button id="reactivity-update">Update First Row Name</button>
+		</div>				
+
+		<!-- table -->
 		<div id="utterances-table"></div>
 	</details>
 
 
 	<!-- ____ Scripts Section ____ -->
-	<script src="/data/utterances_withoutID.js"></script> <!-- This one must be on top of other scripts. -->
+	<script src="/data/utterancesData.js"></script> <!-- This one must be on top of other scripts. -->
+	<script src="/data/keyboardKeysData.js"></script> <!-- This one must be on top of other scripts. -->
 	<script src="/js/lib.js"></script> <!-- This one must be on top of other scripts. -->
 	<script src="/js/utterances_tabulator.js"></script>	
 	<script src="/js/keyboardKeys_tabulatory.js"></script>	

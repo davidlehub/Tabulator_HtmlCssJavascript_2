@@ -1,58 +1,6 @@
 var keyboardKeys_dataFile = "/data/KeyboardKeys_withoutID.json";
 var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 
-// console.log(utterancesData)
-
-
-// // var users = await getData(keyboardKeys_dataFile);
-// var users = getData(keyboardKeys_dataFile);
-// console.log(users);
-
-// var json = require(keyboardKeys_dataFile); //with path
-// console.log(json);
-
-// // var cb =[];
-// var fs = require('fs');
-// var readJson = (keyboardKeys_dataFile, cb) => {
-//   fs.readFile(require.resolve(path), (err, data) => {
-//     if (err) {
-//       cb(err);
-// 			console.log("err020230117115535");
-
-// 		}
-//     else {
-
-// 			// cb(null, JSON.parse(data))
-//       // console.log(cb(null, JSON.parse(data)));
-//       console.log(JSON.parse(data));
-// 		}
-//   })
-// }
-// // console.log(readJson);
-
-
-// readJson('./settings.json', (err, settings) => {
-// 	settings.tags.push('v8')
-// 	expect(settings.tags).to.be.deep.equal(["nodejs", "javascript","v8"])
-// 	done(err)
-// })
-
-// describe("File System", () => {
-//   it("should be able to change settings values", (done) => {
-//     readJson('./settings.json', (err, settings) => {
-//       settings.tags.push('v8')
-//       expect(settings.tags).to.be.deep.equal(["nodejs", "javascript","v8"])
-//       done(err)
-//     })
-//   })
-
-//   it("should reload settings file", (done) => {
-//     readJson('./settings.json', (err, settings) => {
-//       expect(settings.tags).to.be.deep.equal(["nodejs", "javascript" ])
-//       done(err)
-//     })
-//   })
-// })
 
 //Works----------------------------------------------------------------
 // var data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
@@ -60,26 +8,6 @@ var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 // var mydata = JSON.parse(data);
 // console.log(mydata);
 
-
-//----------------------------------------------------------------
-// async function getData(url) {
-//   const response = await fetch(url);
-
-//   return response.json();
-// }
-
-// const data2 = await getData(keyboardKeys_dataFile);
-
-// console.log({ data2 })
-
-
-// function getData(url, cb) {
-//   fetch(url)
-//     .then(response => response.json())
-//     .then(result => cb(result));
-// }
-
-// getData(keyboardKeys_dataFile, (data) => console.log({ data }))
 
 //works but ... ----------------------------------------------------------------
 // fetch("/data/KeyboardKeys_withoutID.json").then(
@@ -97,22 +25,11 @@ var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 // 	// return data2; 
 // }
 
-//----------------------------------------------------------------
-// let jsondata;    
-// fetch(keyboardKeys_dataFile).then(
-//         function(u){ return u.json();}
-//       ).then(
-//         function(json){
-//           jsondata = json;
-//         }
-//       )
-// console.log(jsondata);
-
-
 var tabulator_keyboardKeys_config = {
 	height:"211px",
 
 	// responsiveLayout:"hide",  //hide columns that dont fit on the table
+
 	layout:"fitDataFill", //id020230115231856
 	responsiveLayout:"collapse", //id020230115231856
 	columns:[                 //define the table columns

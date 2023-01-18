@@ -7,6 +7,8 @@ var tabulator_utterances_config = {
 	height:"211px",
 
 	// responsiveLayout:"hide",  //hide columns that dont fit on the table
+	reactiveData:true, //turn on data reactivity |id020230117190349
+
 	layout:"fitDataFill", //id020230115231856
 	responsiveLayout:"collapse", //id020230115231856
 	columns:[                 //define the table columns
@@ -21,7 +23,24 @@ var tabulator_utterances_config = {
 	//additional tabulator configuration options
 };		
 
-renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
+// renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
+renderTable2(utterancesData,utterances_pageElementID2, tabulator_utterances_config);
+
+//__
+//add row to bottom of table on button click
+document.getElementById("reactivity-add").addEventListener("click", function(){
+	tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
+});
+
+//remove bottom row from table on button click
+document.getElementById("reactivity-delete").addEventListener("click", function(){
+	tabledata.pop();
+});
+
+//update name on first row in table on button click
+document.getElementById("reactivity-update").addEventListener("click", function(){
+	tabledata[0].name = "IVE BEEN UPDATED";
+});
 
 
 // // fetch('path/to/data.json')
