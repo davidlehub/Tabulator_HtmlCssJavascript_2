@@ -1,7 +1,8 @@
 // tabledata = [{
 // var tabledata = [{
 // var tabledata = [{
-var tabledata2 = [{
+// var tabledata2 = [{
+var utterancesData = [{
   "id": 0,
 	"utterance": "aff",
   "note": "bla020230113073739",
