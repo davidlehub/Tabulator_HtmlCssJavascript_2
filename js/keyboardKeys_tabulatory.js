@@ -27,6 +27,13 @@ var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 
 var userRequestToChangeUtteranceOf_aKeyboardKey = -1;
 
+//____ for nested table
+// var subTableInstantiated= false;
+var holderEl;
+var tableEl;
+var subTable;
+
+//____
 var tabulator_keyboardKeys_config = {
 	height:"211px",
 
@@ -47,32 +54,52 @@ var tabulator_keyboardKeys_config = {
 
 		{title:"KeySymbol", field:"keySymbol"},
 		{title:"Utterance", field:"utterance"
-			,	cellClick:function(e, cell){
+			// ,	cellClick:function(e, cell){
+			,	cellDblClick:function(e, cell){
 				//e - the click event object
 				//cell - cell component
-				console.log(cell.getRow().getData().utterance);
+
+				console.log("'cellDblClick' |020230119053702"); //Works
+
+				// console.log(cell.getRow().getData().utterance); //Works
 
 				//------------------------------------------------
-				//create and style holder elements
-				var holderEl = document.createElement("div");
-				var tableEl = document.createElement("div");
-
-				holderEl.style.boxSizing = "border-box";
-				holderEl.style.padding = "10px 30px 10px 10px";
-				holderEl.style.borderTop = "1px solid #333";
-				holderEl.style.borderBotom = "1px solid #333";
 				
-				tableEl.style.border = "1px solid #333";
-				
-				cell.getRow().getElement().style.backgroundColor = "red";
+				//__--Show-hide nested table
+				if (holderEl == null) {
+					// console.log(" gonna instantiate subTable")
 
-				holderEl.appendChild(tableEl);
-				cell.getRow().getElement().appendChild(holderEl);
+					//__
+					// cell.getRow().getElement().style.backgroundColor = "red";
 
-				tabulator_utterances_config.height = "100px";
-				var subTable = new Tabulator(tableEl, tabulator_utterances_config)
-
-			}, //End: cellClick
+					//__--create and style holder elements
+					holderEl = document.createElement("div");
+					tableEl = document.createElement("div");
+	
+					holderEl.style.boxSizing = "border-box";
+					holderEl.style.padding = "10px 30px 10px 10px";
+					holderEl.style.borderTop = "1px solid #333";
+					holderEl.style.borderBotom = "1px solid #333";
+					
+					tableEl.style.border = "1px solid #333";
+					
+	
+					holderEl.appendChild(tableEl);
+					cell.getRow().getElement().appendChild(holderEl);
+					
+					tabulator_utterances_config.height = "100px";
+	
+					subTable = new Tabulator(tableEl, tabulator_utterances_config)
+				}	else {
+					// console.log("gonna remove and resset ...");
+					//__--Resetting things.
+					holderEl.remove();
+					holderEl = null;
+					tableEl.remove();
+					tableEl = null;
+					subTable = null;					
+				}
+			}, //End: cellDblClick:function
 
 			// , editor:"input"
 			// , formatter:"lookup", formatterParams:{
@@ -80,7 +107,7 @@ var tabulator_keyboardKeys_config = {
 			// 	"medium": "Fine",
 			// 	"big": "Scary",
 			// }
-		},
+		}, //end: title:"Utterance"
 
 		{title:"Note", field:"note", width:230, editor:"input"},
 		{title:"KeyName", field:"keyName"},
