@@ -41,11 +41,14 @@ var tabulator_keyboardKeys_config = {
 
 	persistence:true, //enable table persistence
 	persistence:{
-		sort:true,
-		filter:true,
-		columns:true,
+		sort: true, //persist column sorting
+		filter: true, //persist filter sorting
+		group: true, //persist row grouping
+		page: true, //persist page
+		columns: true, //persist columns
 	},	
 	persistenceID:"keyboardKeysPerststance",
+	persistenceMode: true,
 
 	layout:"fitDataFill", //id020230115231856
 	responsiveLayout:"collapse", //id020230115231856
