@@ -7,8 +7,18 @@ var tabulator_utterances_config = {
 	height:"211px",
 
 	// responsiveLayout:"hide",  //hide columns that dont fit on the table
-	reactiveData:true, //turn on data reactivity |id020230117190349
+	// reactiveData:true, //turn on data reactivity |id020230117190349
 
+	//---- persistence (https://tabulator.info/docs/5.4/persist)
+	persistence:true, //enable table persistence
+	persistence:{
+		sort:true,
+		filter:true,
+		columns:true,
+	},
+	persistenceID:"utterancesPerststance",
+
+	//---- responsiveLayout:"collapse"
 	layout:"fitDataFill", //id020230115231856
 	responsiveLayout:"collapse", //id020230115231856
 	columns:[                 //define the table columns
@@ -23,33 +33,30 @@ var tabulator_utterances_config = {
 	//additional tabulator configuration options
 };		
 
-// renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
+console.log(utterancesData);
 renderTable2(utterancesData,utterances_pageElementID2, tabulator_utterances_config);
+// renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
 
+
+//----------------------------------------------------------------
+
+//---- Buttons: Reactivity Controls (https://tabulator.info/docs/5.4/reactivity#overview) |id020230117190349 --------------------------------
 //__
 //add row to bottom of table on button click
-document.getElementById("reactivity-add").addEventListener("click", function(){
-	tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
-});
-
-//remove bottom row from table on button click
-document.getElementById("reactivity-delete").addEventListener("click", function(){
-	tabledata.pop();
-});
-
-//update name on first row in table on button click
-document.getElementById("reactivity-update").addEventListener("click", function(){
-	tabledata[0].name = "IVE BEEN UPDATED";
-});
-
-
-// // fetch('path/to/data.json')
-// fetch(utterance_dataFile)
-//     .then(response => response.json())
-//     .then(jsonData => {
-// 		tabulator_utterances_config["data"] = jsonData;
-// 			// tabulator_keyboardKeys_config["data"] = jsonData;
-// 		var table = new Tabulator(utterances_pageElementID2, tabulator_utterances_config);
-// 		// var table = new Tabulator(pageElementID, tabulator_keyboardKeys_config);
+// document.getElementById("reactivity-add").addEventListener("click", function(){
+// 	utterancesData.push({utterance:"bla020230117192258"}); //Works
+// 	// tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
 // });
+
+// //remove bottom row from table on button click
+// document.getElementById("reactivity-delete").addEventListener("click", function(){
+// 	utterancesData.pop();
+// });
+
+// //update name on first row in table on button click
+// document.getElementById("reactivity-update").addEventListener("click", function(){
+// 	utterancesData[0].name = "bla020230117192433";
+// });
+
+
 

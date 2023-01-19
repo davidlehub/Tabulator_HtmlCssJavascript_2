@@ -14,12 +14,13 @@ async function getData(dataUrl) {
 // async function renderTable2(data, pageElementID, tabulatorConfiguration) {
 function renderTable2(data, pageElementID, tabulatorConfiguration) {
 	// let data = await getData(data);
+	// console.log(data)
 	
 	tabulatorConfiguration["data"] = data;
 
 	var table = new Tabulator(pageElementID, tabulatorConfiguration);
 	
-	table.on("rowClick", function (e, row) {
+	table.on("rowClick", function (e, row, table) {
 		// alert("Row " + row.getIndex() + " Clicked!!!!");
 		console.log("Row " + row.getIndex() + " Clicked!!!!");
 
@@ -28,7 +29,9 @@ function renderTable2(data, pageElementID, tabulatorConfiguration) {
 		// console.log(utterancesTable.getData()); //Works
 		var row = utterancesTable.getRow(1); //return row component with index of 1
 		var rowData = row.getData();
-		console.log(rowData.utterance + " |020230117163533"); //Works, returns: "char"
+		console.log(rowData.utterance + " |020230117163534"); //Works, returns: "char"
+
+
 
 		// console.log(table[0].columnManager.columns); //Works
 		// console.log(table[0].columnManager.columnsByField); //Works
@@ -54,7 +57,30 @@ function renderTable2(data, pageElementID, tabulatorConfiguration) {
 		// elem = document.getElementById('utterances-table');
 		// console.log(elem);
 
+		// function customJsonImporter(fileContents){
+		// 	var json = JSON.parse("/data/utterances_withoutID.json");
+		// 	console.log(json);
+
+		// 	return json;
+		// 	// return JSON.parse("/data/utterances_withoutID.json");
+		// }
+
 	});	
+
+	// // table.import("json", ".json");
+	// table.import("/data/utterances_withoutID.json", ".json");
+
+	// function customJsonImporter(fileContents){
+	// 	return JSON.parse("/data/utterances_withoutID.json");
+	// }
+}
+
+function customJsonImporter(fileContents){
+	var json = JSON.parse("/data/utterances_withoutID.json");
+	console.log(json);
+
+	return json;
+	// return JSON.parse("/data/utterances_withoutID.json");
 }
 
 async function renderTable(dataUrl, keyboardKeys_pageElementID2, tabulator_keyboardKeys_config) {

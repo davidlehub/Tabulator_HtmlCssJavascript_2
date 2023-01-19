@@ -30,6 +30,14 @@ var tabulator_keyboardKeys_config = {
 
 	// responsiveLayout:"hide",  //hide columns that dont fit on the table
 
+	persistence:true, //enable table persistence
+	persistence:{
+		sort:true,
+		filter:true,
+		columns:true,
+	},	
+	persistenceID:"keyboardKeysPerststance",
+
 	layout:"fitDataFill", //id020230115231856
 	responsiveLayout:"collapse", //id020230115231856
 	columns:[                 //define the table columns
@@ -43,8 +51,6 @@ var tabulator_keyboardKeys_config = {
 			// 	"medium": "Fine",
 			// 	"big": "Scary",
 			// }
-
-			
 		},
 
 		{title:"Note", field:"note", width:230, editor:"input"},
@@ -146,7 +152,12 @@ var tabulator_keyboardKeys_config = {
 
 // var returnValue = Object;
 
-renderTable(keyboardKeys_dataFile,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
+// console.log(keyboardKeysData);
+
+// renderTable2(keyboardKeysData,utterances_pageElementID2, tabulator_utterances_config);
+renderTable2(keyboardKeysData,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
+
+// renderTable(keyboardKeys_dataFile,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
 
 //----------------------------------------------------------------
 // var table = Tabulator.findTable("utterances-table")[0]; // find table object for table with id of example-table
