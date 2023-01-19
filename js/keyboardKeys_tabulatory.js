@@ -54,8 +54,10 @@ var tabulator_keyboardKeys_config = {
 
 		{title:"KeySymbol", field:"keySymbol"},
 		{title:"Utterance", field:"utterance"
-			// ,	cellClick:function(e, cell){
-			,	cellDblClick:function(e, cell){
+			// , editor:"input"
+
+			//__--When user want to select an utterance for a keyboard's key >> show the utterance table in nested. |id020230118223319
+			,cellDblClick:function(e, cell){
 				//e - the click event object
 				//cell - cell component
 
@@ -87,9 +89,39 @@ var tabulator_keyboardKeys_config = {
 					holderEl.appendChild(tableEl);
 					cell.getRow().getElement().appendChild(holderEl);
 					
-					tabulator_utterances_config.height = "100px";
-	
+					tabulator_utterances_config.height = "120px";
+
+					//__
 					subTable = new Tabulator(tableEl, tabulator_utterances_config)
+					
+					//__-- Confirme selected candidate
+					subTable.on("rowSelected", function(row){
+						//row - row component for the selected row
+						// console.log("rowSelected |020230119074307" + row.getData().utterance); //Works
+						// console.log("rowSelected |020230119074307" + row.getData().utterance); //Works
+						
+						// cell.getRow().getData().utterance = "asdfsdf"; //No
+						// console.log(cell.getRow().getData().utterance); //Works
+						// cell.setValue("sdfsdf"); //works
+						// console.log(cell.getValue() ); //Works
+
+						//__ set the selected value to the requested cell. |id020230119121529
+						cell.setValue(row.getData().utterance); //Works
+
+						//__--Resetting things.
+						holderEl.remove();
+						holderEl = null;
+						tableEl.remove();
+						tableEl = null;
+						subTable = null;						
+
+					});
+
+					// //__--
+					// subTable.on("rowClick", function (e, row) {
+					// 	console.log("rowClick |020230119074306")
+					// });
+					
 				}	else {
 					// console.log("gonna remove and resset ...");
 					//__--Resetting things.
@@ -112,10 +144,9 @@ var tabulator_keyboardKeys_config = {
 		{title:"Note", field:"note", width:230, editor:"input"},
 		{title:"KeyName", field:"keyName"},
 		{title:"Tag", field:"tag"},
-		{title:"Id", field:"id"},
+		{title:"Id", field:"id"}
 
-
-		{title:"Example", field:"example", editor:"list", editorParams:{
+		,{title:"Example", field:"example", editor:"list", editorParams:{
 
 			// var utterancesTable = Tabulator.findTable(utterances_pageElementID2)[0]; // find table object for table with id of example-table
 			// var row = utterancesTable.getRow(1); //return row component with index of 1
@@ -181,7 +212,7 @@ var tabulator_keyboardKeys_config = {
 			// mask:"AAA-999", //apply input mask to text entry
 			freetext:true, //allow the user to set the value of the cell to a free text entry
 		}}
-	],	
+	],//end: columns:
 
 	//____ rowFormatter ____
 	//__ test Nested table. |id020230117081739
@@ -247,8 +278,7 @@ var tabulator_keyboardKeys_config = {
 
 	
 	//additional tabulator configuration options
-};
-
+}; //end var tabulator_keyboardKeys_config
 // var returnValue = Object;
 
 // console.log(keyboardKeysData);
@@ -256,7 +286,7 @@ var tabulator_keyboardKeys_config = {
 // renderTable2(keyboardKeysData,utterances_pageElementID2, tabulator_utterances_config);
 renderTable2(keyboardKeysData,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
 
-// renderTable(keyboardKeys_dataFile,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
+
 
 //----------------------------------------------------------------
 // var table = Tabulator.findTable("utterances-table")[0]; // find table object for table with id of example-table

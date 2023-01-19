@@ -123,6 +123,7 @@ async function renderTable(dataUrl, keyboardKeys_pageElementID2, tabulator_keybo
 
 	var table = new Tabulator(keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
 	
+	//__
 	table.on("rowClick", function (e, row) {
 		// alert("Row " + row.getIndex() + " Clicked!!!!");
 		console.log("Row " + row.getIndex() + " Clicked!!!!");
