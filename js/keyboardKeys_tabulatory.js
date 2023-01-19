@@ -47,6 +47,33 @@ var tabulator_keyboardKeys_config = {
 
 		{title:"KeySymbol", field:"keySymbol"},
 		{title:"Utterance", field:"utterance"
+			,	cellClick:function(e, cell){
+				//e - the click event object
+				//cell - cell component
+				console.log(cell.getRow().getData().utterance);
+
+				//------------------------------------------------
+				//create and style holder elements
+				var holderEl = document.createElement("div");
+				var tableEl = document.createElement("div");
+
+				holderEl.style.boxSizing = "border-box";
+				holderEl.style.padding = "10px 30px 10px 10px";
+				holderEl.style.borderTop = "1px solid #333";
+				holderEl.style.borderBotom = "1px solid #333";
+				
+				tableEl.style.border = "1px solid #333";
+				
+				cell.getRow().getElement().style.backgroundColor = "red";
+
+				holderEl.appendChild(tableEl);
+				cell.getRow().getElement().appendChild(holderEl);
+
+				tabulator_utterances_config.height = "100px";
+				var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+
+			}, //End: cellClick
+
 			// , editor:"input"
 			// , formatter:"lookup", formatterParams:{
 			// 	"note": "Cute",
@@ -130,7 +157,7 @@ var tabulator_keyboardKeys_config = {
 	],	
 
 	//____ rowFormatter ____
-	//__ Nested table. |id020230117081739
+	//__ test Nested table. |id020230117081739
 	// rowFormatter:function(row){
 	// 	//create and style holder elements
 	//  var holderEl = document.createElement("div");
@@ -150,33 +177,33 @@ var tabulator_keyboardKeys_config = {
 	//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
 	// },	
 
-	
-	rowFormatter:function(row){
-		//create and style holder elements
-		var holderEl = document.createElement("div");
-		var tableEl = document.createElement("div");
+	//__ test Nested table: when meat condition |id020230117081739
+	// rowFormatter:function(row){
+	// 	//create and style holder elements
+	// 	var holderEl = document.createElement("div");
+	// 	var tableEl = document.createElement("div");
 
-		holderEl.style.boxSizing = "border-box";
-		holderEl.style.padding = "10px 30px 10px 10px";
-		holderEl.style.borderTop = "1px solid #333";
-		holderEl.style.borderBotom = "1px solid #333";
+	// 	holderEl.style.boxSizing = "border-box";
+	// 	holderEl.style.padding = "10px 30px 10px 10px";
+	// 	holderEl.style.borderTop = "1px solid #333";
+	// 	holderEl.style.borderBotom = "1px solid #333";
 		
-		tableEl.style.border = "1px solid #333";
+	// 	tableEl.style.border = "1px solid #333";
 	 
-		var data = row.getData();
-		//  if(data.utterance == "zoll"){
-		if(data.id == userRequestToChangeUtteranceOf_aKeyboardKey){
-				row.getElement().style.backgroundColor = "red";
+	// 	var data = row.getData();
+	// 	//  if(data.utterance == "zoll"){
+	// 	if(data.id == userRequestToChangeUtteranceOf_aKeyboardKey){
+	// 			row.getElement().style.backgroundColor = "red";
 
-				holderEl.appendChild(tableEl);
-				row.getElement().appendChild(holderEl);
+	// 			holderEl.appendChild(tableEl);
+	// 			row.getElement().appendChild(holderEl);
 
-				tabulator_utterances_config.height = "100px";
-				var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+	// 			tabulator_utterances_config.height = "100px";
+	// 			var subTable = new Tabulator(tableEl, tabulator_utterances_config)
 
-			}	 
-		//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
-	},
+	// 		}	 
+	// 	//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+	// },
 
 
 	//__ Change BackGround Color if meet a condition/
