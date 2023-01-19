@@ -127,6 +127,7 @@ var tabulator_keyboardKeys_config = {
 		}}
 	],	
 
+	//____ rowFormatter ____
 	//__ Nested table. |id020230117081739
 	// rowFormatter:function(row){
 	// 	//create and style holder elements
@@ -147,6 +148,50 @@ var tabulator_keyboardKeys_config = {
 	//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
 	// },	
 
+	
+	rowFormatter:function(row){
+		//create and style holder elements
+	 var holderEl = document.createElement("div");
+	 var tableEl = document.createElement("div");
+
+	 holderEl.style.boxSizing = "border-box";
+	 holderEl.style.padding = "10px 30px 10px 10px";
+	 holderEl.style.borderTop = "1px solid #333";
+	 holderEl.style.borderBotom = "1px solid #333";
+	 
+	 tableEl.style.border = "1px solid #333";
+
+	 
+	 
+	 var data = row.getData();
+	 // console.log(data);
+	 if(data.utterance == "zoll"){
+		 row.getElement().style.backgroundColor = "red";
+
+		 	holderEl.appendChild(tableEl);
+		 	row.getElement().appendChild(holderEl);
+
+			tabulator_utterances_config.height = "100px";
+	 		var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+
+		}	 
+	//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+	},
+
+
+	//__ Change BackGround Color if meet a condition/
+	// rowFormatter:function(row){
+	// 	//row - row component
+		
+	// 	var data = row.getData();
+	// 	// console.log(data);
+	// 	if(data.utterance == "zoll"){
+	// 			// row.getElement().style.backgroundColor = "#1e3b20";
+	// 			row.getElement().style.backgroundColor = "red";
+	// 	}
+	// },
+
+	
 	//additional tabulator configuration options
 };
 
