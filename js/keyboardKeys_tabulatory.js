@@ -25,6 +25,8 @@ var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 // 	// return data2; 
 // }
 
+var userRequestToChangeUtteranceOf_aKeyboardKey = -1;
+
 var tabulator_keyboardKeys_config = {
 	height:"211px",
 
@@ -151,31 +153,29 @@ var tabulator_keyboardKeys_config = {
 	
 	rowFormatter:function(row){
 		//create and style holder elements
-	 var holderEl = document.createElement("div");
-	 var tableEl = document.createElement("div");
+		var holderEl = document.createElement("div");
+		var tableEl = document.createElement("div");
 
-	 holderEl.style.boxSizing = "border-box";
-	 holderEl.style.padding = "10px 30px 10px 10px";
-	 holderEl.style.borderTop = "1px solid #333";
-	 holderEl.style.borderBotom = "1px solid #333";
+		holderEl.style.boxSizing = "border-box";
+		holderEl.style.padding = "10px 30px 10px 10px";
+		holderEl.style.borderTop = "1px solid #333";
+		holderEl.style.borderBotom = "1px solid #333";
+		
+		tableEl.style.border = "1px solid #333";
 	 
-	 tableEl.style.border = "1px solid #333";
+		var data = row.getData();
+		//  if(data.utterance == "zoll"){
+		if(data.id == userRequestToChangeUtteranceOf_aKeyboardKey){
+				row.getElement().style.backgroundColor = "red";
 
-	 
-	 
-	 var data = row.getData();
-	 // console.log(data);
-	 if(data.utterance == "zoll"){
-		 row.getElement().style.backgroundColor = "red";
+				holderEl.appendChild(tableEl);
+				row.getElement().appendChild(holderEl);
 
-		 	holderEl.appendChild(tableEl);
-		 	row.getElement().appendChild(holderEl);
+				tabulator_utterances_config.height = "100px";
+				var subTable = new Tabulator(tableEl, tabulator_utterances_config)
 
-			tabulator_utterances_config.height = "100px";
-	 		var subTable = new Tabulator(tableEl, tabulator_utterances_config)
-
-		}	 
-	//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
+			}	 
+		//  var subTable = new Tabulator(tableEl, tabulator_utterances_config)
 	},
 
 
