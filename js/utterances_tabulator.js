@@ -7,7 +7,7 @@ var tabulator_utterances_config = {
 	height:"211px",
 	selectable:"highlight",
 	// responsiveLayout:"hide",  //hide columns that dont fit on the table
-	reactiveData:true, //turn on data reactivity. Carefull: 020230117190349 a1 ProbSolut DataHasWeirdContent– 'reactiveData'.mp4 |id020230117190349
+	// reactiveData:true, //turn on data reactivity. Carefull: 020230117190349 a1 ProbSolut DataHasWeirdContent– 'reactiveData'.mp4 |id020230117190349
 
 	//---- persistence (https://tabulator.info/docs/5.4/persist)
 	persistence:true, //enable table persistence
@@ -61,38 +61,71 @@ var tabulator_utterances_config = {
 
 
 
-renderTable2(utterancesData,utterances_pageElementID, tabulator_utterances_config);
+var utteranceTable = renderTable2(utterancesData,utterances_pageElementID, tabulator_utterances_config);
+// renderTable2(utterancesData,utterances_pageElementID, tabulator_utterances_config);
 // renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
 
 
 //----------------------------------------------------------------
+//__--Buttons--
+//Add row on "Add Row" button click
+document.getElementById("add-row").addEventListener("click", function(){
+	 utteranceTable.addRow({note: "_ testToX00230120143800"});
+});
 
-//---- Buttons: Reactivity Controls (https://tabulator.info/docs/5.4/reactivity#overview) |id020230117190349 --------------------------------
-//__add row to bottom of table on button click
-document.getElementById("reactivity-add").addEventListener("click", function(){
-	utterancesData.unshift({utterance:"bla02030120091227"});
-	// utterancesData.push({utterance:"bla020230117192258"}); //Works
-	console.log(utterancesData);
+//Delete row on "Delete Row" button click
+document.getElementById("del-row").addEventListener("click", function(){
+	// var selectedRows = utteranceTable.getSelectedRows(); //get array of currently selected row components.
+	var countDeleted = 0;
+	utteranceTable.getSelectedRows().forEach(row => {
+		row.delete();
+		countDeleted ++;
+	});
+	// alert(countDeleted + "row removed")
+	console.log(countDeleted + " row removed");
+
+	// utteranceTable.deleteRow(1);
+});
+
+// //Clear table on "Empty the table" button click
+// document.getElementById("clear").addEventListener("click", function(){
+// 	table.clearData()
+// });
+
+// //Reset table contents on "Reset the table" button click
+// document.getElementById("reset").addEventListener("click", function(){
+// 	table.setData(tabledata);
+// });
+
+
+
+
+// //---- Buttons: Reactivity Controls (https://tabulator.info/docs/5.4/reactivity#overview) |id020230117190349 --------------------------------
+// //__add row to bottom of table on button click
+// document.getElementById("reactivity-add").addEventListener("click", function(){
+// 	utterancesData.unshift({utterance:"bla02030120091227"});
+// 	// utterancesData.push({utterance:"bla020230117192258"}); //Works
+// 	console.log(utterancesData);
 	
-	// tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
-});
+// 	// tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
+// });
 
-// //remove bottom row from table on button click
-document.getElementById("reactivity-delete").addEventListener("click", function(){
-	utterancesData.pop();
-});
+// // //remove bottom row from table on button click
+// document.getElementById("reactivity-delete").addEventListener("click", function(){
+// 	utterancesData.pop();
+// });
 
-// //update name on first row in table on button click
-document.getElementById("reactivity-update").addEventListener("click", function(){
-	console.log("before update 'utterancesData[0].utterance':");
-	console.log(utterancesData[0].utterance);
+// // //update name on first row in table on button click
+// document.getElementById("reactivity-update").addEventListener("click", function(){
+// 	console.log("before update 'utterancesData[0].utterance':");
+// 	console.log(utterancesData[0].utterance);
 
-	utterancesData[0].utterance = "bla020230117192433";
+// 	utterancesData[0].utterance = "bla020230117192433";
 
-	console.log("after update 'utterancesData[0].utterance':");
-	console.log(utterancesData[0].utterance);
+// 	console.log("after update 'utterancesData[0].utterance':");
+// 	console.log(utterancesData[0].utterance);
 
-});
+// });
 
 
 

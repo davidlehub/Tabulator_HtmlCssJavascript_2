@@ -131,8 +131,9 @@ function renderTable2(data, pageElementID, tabulatorConfiguration) {
 
 	// document.getElementById("utterances-download-json").addEventListener("click", function(){
 	// 	table.download("json", "data.json");
-	// });	
+	// });
 
+	return table;
 }
 
 function customJsonImporter(fileContents){
