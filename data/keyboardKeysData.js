@@ -705,9 +705,4 @@ var keyboardKeysData = [{
   "word": "purp",
   "keyName": "backspace",
   "tag": "editing"
-},{
-  "_id": "",
-  "keySymbol": "",
-  "keyName": "",
-  "word": ""
 }]

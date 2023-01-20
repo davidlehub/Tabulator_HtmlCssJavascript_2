@@ -2,6 +2,33 @@ var keyboardKeys_dataFile = "/data/KeyboardKeys_withoutID.json";
 var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
 
 
+// if(localStorage.getItem("keyboardKeysData") != null) {
+// 	// const restoredSession = JSON.parse(localStorage.getItem("keyboardKeysData"));
+// 	keyboardKeysData = JSON.parse(localStorage.getItem("keyboardKeysData"));
+// }
+
+
+// console.log(restoredSession)
+
+//__--test save to localstorage
+// const session = {
+//   screens: [],
+//   state: true,
+// };
+
+// session.screens.push({ name: "screenA", width: 450, height: 250 });
+// session.screens.push({ name: "screenB", width: 650, height: 350 });
+// session.screens.push({ name: "screenC", width: 750, height: 120 });
+// session.screens.push({ name: "screenD", width: 250, height: 60 });
+// session.screens.push({ name: "screenE", width: 390, height: 120 });
+// session.screens.push({ name: "screenF", width: 1240, height: 650 });
+
+// // Converting the JSON string with JSON.stringify()
+// // then saving with localStorage in the name of session
+// localStorage.setItem("session", JSON.stringify(session));
+// console.log(session.screens)
+
+
 //Works----------------------------------------------------------------
 // var data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
 
@@ -110,6 +137,26 @@ var tabulator_keyboardKeys_config = {
 
 						//__ set the selected value to the requested cell. |id020230119121529
 						cell.setValue(row.getData().utterance); //Works
+						// console.log(keyboardKeysData[row.getData().id].utterance);
+						
+						// //__ Updating Existing Data (in cache) |id020230119173353
+						// localStorage.setItem("keyboardKeysData", JSON.stringify(keyboardKeysData));
+
+						// const restoredSession = JSON.parse(localStorage.getItem("keyboardKeysData"));
+						// restoredSession = JSON.parse(localStorage.getItem("keyboardKeysData"));
+						// console.log(restoredSession)						
+						// console.log(keyboardKeysData);
+						// console.log(keyboardKeysData[row.getData().id].utterance);
+
+
+						// row.update({"utterance":"bla020230119173701"}); Works but... 
+						// var table020230119173538 = row.getTable();
+						// table.updateData([{id:1, utterance:"bla020230119173701"}]);
+						// var table020230119173538 = row.getTable().updateData([{id:1, utterance:"bla020230119173701"}]);
+						// console.log(table020230119173538 ); //Works
+						// table020230119173538.updateData([{id:1, utterance:"bla020230119173701"}]);
+						// table020230119173538.updateOrAddData([{id:1, utterance:"bla020230119173701"}]);
+
 
 						//__--Resetting things.
 						holderEl.remove();
