@@ -1,0 +1,74 @@
+<!-- Create a web page with using Tabulator JavaScript library -->
+<!DOCTYPE html>
+
+<html>
+<head>
+	<!-- __ Title -->
+	<title>Test_ReactiveData 😃</title>
+	<h1>Welcome Test_ReactiveData 😃</h1>
+
+	<!-- Import Tabulator things -->
+	<link href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.3/dist/js/tabulator.min.js"></script>
+	
+	<!-- Css for collapsible sections -->
+	<!-- <link href="/css/collapse.css" type="text/css" rel="stylesheet"> -->
+
+	<!-- <link rel="shortcut icon" href="#"> -->
+
+
+</head>
+
+<body>
+	<div>
+    <button id="reactivity-add">Add New Row</button>
+    <button id="reactivity-delete">Remove Row</button>
+    <button id="reactivity-update">Update First Row Name</button>
+	</div>
+
+	<div id="example-table"></div>
+
+	<!-- ____ Scripts Section ____ -->
+	<script>
+		//define data
+		var tabledata = [
+				{id:1, name:"Oli Bob", progress:12, gender:"male", rating:1, col:"red" },
+				{id:2, name:"Mary May", progress:1, gender:"female", rating:2, col:"blue" },
+				{id:3, name:"Christine Lobowski", progress:42, gender:"female", rating:0, col:"green" },
+				{id:4, name:"Brendon Philips", progress:100, gender:"male", rating:1, col:"orange" },
+				{id:5, name:"Margret Marmajuke", progress:16, gender:"female", rating:5, col:"yellow"},
+		];
+
+		//Build Tabulator
+		var table = new Tabulator("#example-table", {
+				height:"311px",
+				layout:"fitColumns",
+				reactiveData:true, //turn on data reactivity
+				data:tabledata, //load data into table
+				columns:[
+						{title:"Name", field:"name", sorter:"string", width:200},
+						{title:"Progress", field:"progress", sorter:"number", formatter:"progress"},
+						{title:"Gender", field:"gender", sorter:"string"},
+						{title:"Rating", field:"rating", formatter:"star", hozAlign:"center", width:100},
+						{title:"Favourite Color", field:"col", sorter:"string"},
+				],
+		});
+
+		//add row to bottom of table on button click
+		document.getElementById("reactivity-add").addEventListener("click", function(){
+				tabledata.push({name:"IM A NEW ROW", progress:100, gender:"male"});
+		});
+
+		//remove bottom row from table on button click
+		document.getElementById("reactivity-delete").addEventListener("click", function(){
+				tabledata.pop();
+		});
+
+		//update name on first row in table on button click
+		document.getElementById("reactivity-update").addEventListener("click", function(){
+				tabledata[0].name = "IVE BEEN UPDATED";
+		});
+
+	</script>	
+</body>
+</html>
