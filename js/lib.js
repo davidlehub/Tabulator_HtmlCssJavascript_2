@@ -122,6 +122,17 @@ function renderTable2(data, pageElementID, tabulatorConfiguration) {
 	// function customJsonImporter(fileContents){
 	// 	return JSON.parse("/data/utterances_withoutID.json");
 	// }
+
+	//__--trigger download of data.json file |id020230119222635
+	//__ remove the '#' in the string
+	document.getElementById(pageElementID + "-download-json").addEventListener("click", function(){
+		table.download("json", pageElementID.replace("#", "") + "-data.json");
+	});
+
+	// document.getElementById("utterances-download-json").addEventListener("click", function(){
+	// 	table.download("json", "data.json");
+	// });	
+
 }
 
 function customJsonImporter(fileContents){
@@ -157,7 +168,7 @@ async function renderTable(dataUrl, keyboardKeys_pageElementID2, tabulator_keybo
 		console.log("Row " + row.getIndex() + " Clicked!!!!");
 
 		//------------------------------------------------
-		var utterancesTable = Tabulator.findTable(utterances_pageElementID2)[0]; // find table object for table with id of example-table
+		var utterancesTable = Tabulator.findTable(utterances_pageElementID)[0]; // find table object for table with id of example-table
 		// console.log(utterancesTable.getData()); //Works
 		var row = utterancesTable.getRow(1); //return row component with index of 1
 		var rowData = row.getData();

@@ -1,5 +1,5 @@
 var keyboardKeys_dataFile = "/data/KeyboardKeys_withoutID.json";
-var keyboardKeys_pageElementID2 = "#keyboardKeys-table";
+var keyboardKeys_pageElementID = "#keyboardKeys-table";
 
 
 // if(localStorage.getItem("keyboardKeysData") != null) {
@@ -334,7 +334,7 @@ var tabulator_keyboardKeys_config = {
 // console.log(keyboardKeysData);
 
 // renderTable2(keyboardKeysData,utterances_pageElementID2, tabulator_utterances_config);
-renderTable2(keyboardKeysData,keyboardKeys_pageElementID2, tabulator_keyboardKeys_config);
+renderTable2(keyboardKeysData,keyboardKeys_pageElementID, tabulator_keyboardKeys_config);
 
 
 

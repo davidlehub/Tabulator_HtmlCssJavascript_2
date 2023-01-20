@@ -1,5 +1,5 @@
 var utterance_dataFile = "/data/utterances_withoutID.json"
-var utterances_pageElementID2 = "#utterances-table"
+var utterances_pageElementID = "#utterances-table"
 
 // tabulator_keyboardKeys_config = {
 // const tabulator_utterances_config = {
@@ -60,7 +60,7 @@ var tabulator_utterances_config = {
 };		
 
 console.log(utterancesData);
-renderTable2(utterancesData,utterances_pageElementID2, tabulator_utterances_config);
+renderTable2(utterancesData,utterances_pageElementID, tabulator_utterances_config);
 // renderTable(utterance_dataFile,utterances_pageElementID2, tabulator_utterances_config);
 
 
