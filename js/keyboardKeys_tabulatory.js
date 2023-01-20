@@ -82,10 +82,10 @@ var tabulator_keyboardKeys_config = {
 	columns:[                 //define the table columns
 		{formatter:"responsiveCollapse", width:30, minWidth:30, hozAlign:"center", resizable:false, headerSort:false}, //id020230115231856
 
-		{title:"KeySymbol", field:"keySymbol"},
+		{title:"KeySymbol", field:"keySymbol", headerFilter:"input"},
 		{title:"Utterance", field:"utterance"
 			// , editor:"input"
-
+			,  headerFilter:"input"
 			//__--When user want to select an utterance for a keyboard's key >> show the utterance table in nested. |id020230118223319
 			,cellDblClick:function(e, cell){
 				//e - the click event object
@@ -190,8 +190,7 @@ var tabulator_keyboardKeys_config = {
 			// 	"big": "Scary",
 			// }
 		}, //end: title:"Utterance"
-
-		{title:"Note", field:"note", width:230, editor:"input"},
+		{title:"Note", field:"note", width:230, editor:"input", headerFilter:"input"},
 		{title:"KeyName", field:"keyName"},
 		{title:"Tag", field:"tag"},
 		{title:"Id", field:"id"}

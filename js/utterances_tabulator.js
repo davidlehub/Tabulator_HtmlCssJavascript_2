@@ -31,9 +31,9 @@ var tabulator_utterances_config = {
 		// }, hozAlign:"center", headerSort:false},
 	
 
-		,{title:"Utterance", field:"utterance", editor:"input"},
-		{title:"Note", field:"note", width:230, editor:"input"},
-		{title:"Used For", field:"usedFor", width:130},
+		,{title:"Utterance", field:"utterance", editor:"input", headerFilter:"input"},
+		{title:"Note", field:"note", width:230, editor:"input", headerFilter:"input"},
+		{title:"Used For", field:"usedFor", width:130, headerFilter:"input"},
 		{title:"Id", field:"id"}
 	]	//end: columns
 
