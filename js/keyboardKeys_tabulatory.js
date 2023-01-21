@@ -119,7 +119,7 @@ var tabulator_keyboardKeys_config = {
 					holderEl.appendChild(tableEl);
 					cell.getRow().getElement().appendChild(holderEl);
 					
-					tabulator_utterances_config.height = "120px";
+					tabulator_utterances_config.height = "320px";
 
 					//__
 					subTable = new Tabulator(tableEl, tabulator_utterances_config)
