@@ -191,9 +191,9 @@ var tabulator_keyboardKeys_config = {
 			// }
 		}, //end: title:"Utterance"
 		{title:"Note", field:"note", width:230, editor:"input", headerFilter:"input"},
-		{title:"KeyName", field:"keyName"},
-		{title:"Tag", field:"tag"},
-		{title:"Id", field:"id"}
+		{title:"KeyName", field:"keyName", headerFilter:"input"},
+		{title:"Tag", field:"tag", headerFilter:"input"},
+		{title:"Id", field:"id", headerFilter:"input"}
 
 		,{title:"Example", field:"example", editor:"list", editorParams:{
 

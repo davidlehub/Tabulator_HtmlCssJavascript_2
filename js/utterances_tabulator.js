@@ -31,10 +31,22 @@ var tabulator_utterances_config = {
 		// }, hozAlign:"center", headerSort:false},
 	
 
-		,{title:"Utterance", field:"utterance", editor:"input", headerFilter:"input"},
-		{title:"Note", field:"note", width:230, editor:"input", headerFilter:"input"},
-		{title:"Used For", field:"usedFor", width:130, headerFilter:"input"},
-		{title:"Id", field:"id"}
+		,{title:"Utterance", field:"utterance", editor:"input", headerFilter:"input"}
+		,{title:"Note", field:"note", width:230, editor:"input", headerFilter:"input"}
+		,{title:"Used For", field:"usedFor", width:130, headerFilter:"input"}
+		,{title:"Id", field:"id", headerFilter:"input"
+			// ,formatter:"money", formatterParams:{
+			// 	decimal:",",
+			// 	thousand:false,
+			// 	// symbol:"$",
+			// 	// symbol:false,
+			// 	// symbolAfter:"p",
+			// 	symbolAfter:true,
+			// 	// precision:false
+			// }
+		}
+		,{title:"#", field:"rowNumb", formatter:"rownum"}
+
 	]	//end: columns
 
 	// //__
@@ -68,12 +80,17 @@ var utteranceTable = renderTable2(utterancesData,utterances_pageElementID, tabul
 
 //----------------------------------------------------------------
 //__--Buttons--
-//Add row on "Add Row" button click
+//Add row on "Add Row" button click |id02023120150748
 document.getElementById("add-row").addEventListener("click", function(){
-	 utteranceTable.addRow({note: "_ testToX00230120143800"});
+	// var arrayOfId = utteranceTable.getData().map((row) => row.id);
+	var nextIdAvailaible = getLowestUnusedNumberInAnArray(utteranceTable.getData().map((row) => row.id))
+	
+	//__
+	utteranceTable.addRow({id: nextIdAvailaible});
+	console.log('Row added (id: ' + nextIdAvailaible + ')');
 });
 
-//Delete row on "Delete Row" button click
+//__Delet/removee row on "Delete Row" button click |id020230120145906
 document.getElementById("del-row").addEventListener("click", function(){
 	// var selectedRows = utteranceTable.getSelectedRows(); //get array of currently selected row components.
 	var countDeleted = 0;

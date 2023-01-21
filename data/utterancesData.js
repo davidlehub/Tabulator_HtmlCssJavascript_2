@@ -655,4 +655,22 @@ var utterancesData = [{
 },{
   "id": 118,
 	"utterance": "tish"
+},{
+  "id": 119,
+	"utterance": "ossey"
+},{
+  "id": 120,
+	"utterance": "karro"
+},{
+  "id": 121,
+	"utterance": "ola"
+},{
+  "id": 122,
+	"utterance": "ablo"
+},{
+  "id": 123,
+	"utterance": "tross"
+},{
+  "id": 124,
+	"utterance": "soy"
 }]

@@ -213,3 +213,21 @@ async function renderTable(dataUrl, keyboardKeys_pageElementID2, tabulator_keybo
 // table.on("rowClick", function (e, row) {
 // 	alert("Row " + row.getIndex() + " Clicked!!!!");
 // });
+
+function getLowestUnusedNumberInAnArray(inputArray = []) {
+	//-- from: https://stackoverflow.com/questions/30672861/find-the-lowest-unused-number-in-an-array-using-javascript
+
+	inputArray.sort(function(a, b) { return a-b; });   // To sort by numeric
+	
+	var lowest = -1;
+	for (i = 0;  i < inputArray.length;  ++i) {
+		if (inputArray[i] != i) {
+			lowest = i;
+			break;
+		}
+	}
+	if (lowest == -1) {
+			lowest = inputArray[inputArray.length - 1] + 1;
+	}
+	return lowest;
+}
